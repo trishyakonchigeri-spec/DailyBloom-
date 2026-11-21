@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f4ed">
+    <title>Sanskar Family - Morning Message Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page">
+
+        <header class="top">
+            <div class="sun">🌻</div>
+            <p class="eyebrow">SANSKAR FAMILY</p>
+            <h1>Begin your day with <em>meaning.</em></h1>
+            <p class="sub">A fresh thought to inspire a better day.</p>
+        </header>
+
+        <section class="generator panel">
+            <label for="topic">Today's message topic</label>
+            <input
+                id="topic"
+                maxlength="160"
+                value="Personal growth"
+                placeholder="e.g. kindness, discipline, teamwork"
+            >
+
+            <label for="context" class="optional-label">
+                Additional context <span>(optional)</span>
+            </label>
+
+            <textarea
+                id="context"
+                rows="2"
+                maxlength="500"
+                placeholder="Add a situation or thought..."
+            ></textarea>
+
+            <button id="generateBtn" class="primary">
+                Generate morning message <span>→</span>
+            </button>
+
+            <p id="status" class="status" aria-live="polite">
+                Create a meaningful message for Sanskar Family.
+            </p>
+        </section>
+
+        <section id="result" class="result panel hidden" aria-live="polite">
+
+            <div class="greeting">
+                🌻 Good Morning, Sanskar Family!
+            </div>
+
+            <h2 id="theme" class="theme"></h2>
+
+            <blockquote id="quote"></blockquote>
+
+            <div class="section-block">
+                <p id="hindiLine" class="hindi"></p>
+            </div>
+
+            <div class="closing" id="closing"></div>
+
+            <div class="actions">
+                <button id="copyBtn" class="secondary">Copy message</button>
+                <button id="anotherBtn" class="primary small">
+                    Generate another →
+                </button>
+            </div>
+        </section>
+<footer>
+            Make every morning meaningful. 🌻
+        </footer>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

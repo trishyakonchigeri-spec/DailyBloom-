@@ -1,0 +1,27 @@
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables (API keys)
+.env
+.env.*
+
+# Keep example environment file
+!.env.example
+
+# Flask
+instance/
+.webassets-cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
